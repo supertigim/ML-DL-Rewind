@@ -26,6 +26,8 @@
     % cd ../my_torch_project
     # train the sample MNIST model 
     % python train.py -c config.json
+    # test a model trained above. 
+    % python test.py -c config.json -r ./saved/models/Mnist_LeNet/0616_232433/checkpoint-epoch52.pth 
 ```
 
 ## Reference
