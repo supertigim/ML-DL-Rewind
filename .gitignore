@@ -106,3 +106,5 @@ ENV/
 .idea/
 __MACOSX/
 .DS_Store
+data/
+*zip
