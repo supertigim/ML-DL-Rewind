@@ -108,3 +108,4 @@ __MACOSX/
 .DS_Store
 data/
 *zip
+*tar.gz
