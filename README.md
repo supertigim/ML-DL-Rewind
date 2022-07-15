@@ -29,4 +29,6 @@
 - [python web scraping request error](https://stackoverflow.com/questions/61968521/python-web-scraping-request-errormod-security)
 - [notMNIST download site](http://yaroslavvb.com/upload/notMNIST/)
 - [py_remote_extract_tar_gzip.py](https://gist.github.com/devhero/8ae2229d9ea1a59003ced4587c9cb236)
-- [Colab 이용방법, 환경설정 등](https://theorydb.github.io/dev/2019/08/23/dev-ml-colab/) 
+- [Colab 이용방법, 환경설정 등](https://theorydb.github.io/dev/2019/08/23/dev-ml-colab/)
+- [Tensorboard add image](https://stackoverflow.com/questions/67094398/assertionerror-size-of-input-tensor-and-input-format-are-different-tensorboa)
+- [How to use Multi-GPU](https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255)

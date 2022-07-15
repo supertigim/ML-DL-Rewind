@@ -109,4 +109,8 @@ __MACOSX/
 data/
 *zip
 *tar.gz
+
+# custom
 data*/
+code_snippet/
+pytorch/logs/
