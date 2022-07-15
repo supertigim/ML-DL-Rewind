@@ -33,3 +33,4 @@
 ## Reference
 
 - [PyTorch Project Template](https://github.com/victoresque/pytorch-template#requirements)
+- [Multi-GPU with PyTorch](https://blog.si-analytics.ai/12)
