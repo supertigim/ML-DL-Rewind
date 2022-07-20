@@ -1,6 +1,6 @@
 # Machine Learning and Deep Learning Rewind in 2022
 
-기존 공부했던 것, 아는 것 정리 하기  
+아는 것 정리하기, 앞으로 공부할 것 정리하기
 
 ## Colab 사용 하기  
 
@@ -20,6 +20,20 @@
     cd Colab                # 여기다 만들어서 난 쓴다 (Optional)
 
 ```
+
+## 주기적으로 방문하는 사이트
+
+- [Object Detection on COCO test-dev](https://paperswithcode.com/sota/object-detection-on-coco)
+
+## 볼만한 논문 설명 or 코드 예제
+
+(updated in 2022.07.20)
+
+- [Implementing Visual Transformer in PyTorch](https://github.com/FrancescoSaverioZuppichini/ViT)
+- [Transformer 설명 및 간단 한글 챗봇 만들기](https://wikidocs.net/31379)
+- [해외 프로축구 선수 예제로 설명한 Node2Vec 노트북](https://github.com/eliorc/Medium/blob/master/Nod2Vec-FIFA17-Example.ipynb)
+- [차원축소 방법 비교: PCA, t-SNE, AutoEncoder](https://github.com/eliorc/Medium/blob/master/PCA-tSNE-AE.ipynb)
+- [MNIST로 알아보는 비지도 학습: K-Means(with PCA), t-SNE with DBSCAN, AutoEncoder](https://yamalab.tistory.com/118)
 
 ## Reference  
 
