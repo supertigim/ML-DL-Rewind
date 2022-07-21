@@ -21,6 +21,22 @@
 
 ```
 
+```python 
+    # 추가적으로 해주면 좋은 작업 
+    
+    # Step 1. Matplotlib 업그레이드
+    !pip install matplotlib -U 
+    !pip install seaborn -U
+    !pip install pandas -U
+
+    # Step 2. 한글 설치 및 사용 설정
+    !apt-get -qq install -y fonts-nanum
+    !fc-cache -fv  
+    !rm ~/.cache/matplotlib -rf
+
+    # Step 3. 셀 실행 후 런타임 재시작
+```
+
 ## 주기적으로 방문하는 사이트
 
 - [Object Detection on COCO test-dev](https://paperswithcode.com/sota/object-detection-on-coco)
