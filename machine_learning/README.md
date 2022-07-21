@@ -12,7 +12,6 @@
 - [위 코드 설명 자료, 2022.03](https://jehyunlee.github.io/2022/07/15/Python-DS-107-kierlecture4/220714_%EC%9D%B4%EC%A0%9C%ED%98%84_KIERML_2203_treemodels.pdf)
 - [에너지기술연구원 머신러닝 세미나 유튜브](https://www.youtube.com/user/vinci109/videos)
 - [PyCaret + Ray 조합으로 Bayesian Optimization, 2021.03](https://www.kdnuggets.com/2021/03/bayesian-hyperparameter-optimization-tune-sklearn-pycaret.html)
-- [seaborn.load_dataset 사용을 위한 샘플 데이터 레포지토리](https://github.com/mwaskom/seaborn-data)
 - [RMSLE or Root Mean Squared Log Error, 2020.07](https://ahnjg.tistory.com/90)
 - [DecisionTreeRegressor 예제, 파라미터 최적화방법도 소개](DecisionTreeRegressor)
 - [pycaret에서 search_library 중에서 tune-sklearn을 사용할 때 방법, 2021.06](https://data-newbie.tistory.com/755)

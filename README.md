@@ -35,6 +35,11 @@
 - [차원축소 방법 비교: PCA, t-SNE, AutoEncoder](https://github.com/eliorc/Medium/blob/master/PCA-tSNE-AE.ipynb)
 - [MNIST로 알아보는 비지도 학습: K-Means(with PCA), t-SNE with DBSCAN, AutoEncoder](https://yamalab.tistory.com/118)
 
+## dataset
+
+- [seaborn.load_dataset 사용을 위한 샘플 데이터 레포지토리](https://github.com/mwaskom/seaborn-data)
+- [scikit-learn dataset 종류](https://scikit-learn.org/stable/datasets.html)
+
 ## Reference  
 
 - [업스테이지](https://www.youtube.com/channel/UCXJY5PPAToqqSketm5_PrDw/videos)
