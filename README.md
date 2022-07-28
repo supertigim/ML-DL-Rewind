@@ -37,9 +37,13 @@
     # Step 3. 셀 실행 후 런타임 재시작
 ```
 
-## 주기적으로 방문하는 사이트
+## 자주 방문하는 사이트
 
+- [Browse State-of-the-Art](https://paperswithcode.com/sota)
+- [SuperGLUE Leaderboard](https://super.gluebenchmark.com/leaderboard)
 - [Object Detection on COCO test-dev](https://paperswithcode.com/sota/object-detection-on-coco)
+- [캐글 코드](https://www.kaggle.com/code)
+- [Annotation Tools 모음](https://github.com/zenml-io/awesome-open-data-annotation?fbclid=IwAR1pdaoWWHDZLFDU8u7xCYOrrJaWYDSwjfGDaDSHgVHYKbVeJW6BPqtUdTY)
 
 ## 볼만한 논문 설명 or 코드 예제
 
@@ -50,11 +54,17 @@
 - [해외 프로축구 선수 예제로 설명한 Node2Vec 노트북](https://github.com/eliorc/Medium/blob/master/Nod2Vec-FIFA17-Example.ipynb)
 - [차원축소 방법 비교: PCA, t-SNE, AutoEncoder](https://github.com/eliorc/Medium/blob/master/PCA-tSNE-AE.ipynb)
 - [MNIST로 알아보는 비지도 학습: K-Means(with PCA), t-SNE with DBSCAN, AutoEncoder](https://yamalab.tistory.com/118)
+- [It’s NeRF From Nothing: Build A Complete NeRF with PyTorch](https://towardsdatascience.com/its-nerf-from-nothing-build-a-vanilla-nerf-with-pytorch-7846e4c45666)
+- [NeRF From Nothing - 위 블로그 colab](https://colab.research.google.com/drive/1TppdSsLz8uKoNwqJqDGg8se8BHQcvg_K?usp=sharing#scrollTo=vUI5BA9BXlTm)
+- [D-NeRF 데이터셋](https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip?dl=0)
 
 ## dataset
 
+- [캐글 데이터셋](https://www.kaggle.com/datasets)
+- [허킹페이스 데이터셋](https://huggingface.co/datasets)
 - [seaborn.load_dataset 사용을 위한 샘플 데이터 레포지토리](https://github.com/mwaskom/seaborn-data)
 - [scikit-learn dataset 종류](https://scikit-learn.org/stable/datasets.html)
+- [유명인 이미지 모음 | CelebA: 캐나다에서 FaceID 프로젝트 할 때 사용한 데이터셋](https://datagen.tech/guides/image-datasets/celeba/)
 
 ## Reference  
 
@@ -67,3 +77,4 @@
 - [Colab 이용방법, 환경설정 등](https://theorydb.github.io/dev/2019/08/23/dev-ml-colab/)
 - [Tensorboard add image](https://stackoverflow.com/questions/67094398/assertionerror-size-of-input-tensor-and-input-format-are-different-tensorboa)
 - [How to use Multi-GPU](https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255)
+- [쥬피터 단축키 모음](https://kkokkilkon.tistory.com/151)

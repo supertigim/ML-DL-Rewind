@@ -1,0 +1,7 @@
+albumentations
+efficientnet-pytorch
+jupyter
+jupyterlab
+matplotlib
+pandas
+voila
