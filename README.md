@@ -21,7 +21,7 @@
 
 ```
 
-```python 
+```bash 
     # 추가적으로 해주면 좋은 작업 
     
     # Step 1. Matplotlib 업그레이드
@@ -35,6 +35,25 @@
     !rm ~/.cache/matplotlib -rf
 
     # Step 3. 셀 실행 후 런타임 재시작
+```
+
+## 잘 까먹는 명령어
+
+```bash
+
+# 기본 가상 환경. 공식 문서도 버린...
+python -m venv .venv
+source .venv/bin/activate
+
+# 사용하는 모듈 freeze 하기 
+pip list --not-required --format=freeze > requirements.txt 
+
+# 도커 실행 
+docker run -it --name 컨테이너이름(ps로 찾는이름) -e 환경변수 -d -p 8888:8888 -v /local/folder/:/container/folder 이미지이름(템플릿)
+
+# 도커 접근 (ssh 형태)
+docker exec -it 컨테이너이름 /bin/bash
+
 ```
 
 ## 자주 방문하는 사이트
@@ -78,3 +97,5 @@
 - [Tensorboard add image](https://stackoverflow.com/questions/67094398/assertionerror-size-of-input-tensor-and-input-format-are-different-tensorboa)
 - [How to use Multi-GPU](https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255)
 - [쥬피터 단축키 모음](https://kkokkilkon.tistory.com/151)
+- [Docker run 옵션 종류](https://wooono.tistory.com/348)
+- [Can't push image to google container registry - Caller does not have permission 'storage.buckets.get'](https://stackoverflow.com/questions/51873072/cant-push-image-to-google-container-registry-caller-does-not-have-permission)
