@@ -17,3 +17,5 @@
 - [DecisionTreeRegressor 예제, 파라미터 최적화방법도 소개](DecisionTreeRegressor)
 - [pycaret에서 search_library 중에서 tune-sklearn을 사용할 때 방법, 2021.06](https://data-newbie.tistory.com/755)
 - [skorch: A scikit-learn compatible neural network library that wraps PyTorch.](https://github.com/skorch-dev/skorch)
+- [pandas.get_dummies 대신 sklearn.preprocessing.OneHotEncoder를 쓰자](https://psystat.tistory.com/136)
+- [libomp.dylib 문제 해결 at 맥북](https://shelling203.tistory.com/47)
