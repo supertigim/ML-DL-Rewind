@@ -19,6 +19,14 @@ flask에 비해 속도에 강점이 있는 웹프레임워크로 요즘 AI업계
   poetry install # toml에 정의된 모듈 설치 
   poetry shell # 가상 환경 띄우기 
   poetry add [모듈이름] # 새로운 모듈 추가 pip install 과 동일 
+
+  # poetry 환경에서 python 버전 변경 
+  pyenv local 3.10
+  poetry env use python3.10
+  poetry env info
+
+  # poetry update
+  poetry self update
 ```
 
 ## How to run
@@ -36,3 +44,6 @@ make -j2 run_app
 ## Reference
 
 - [No BLAS/LAPACK libraries found when installing SciPy on macOS](https://stackoverflow.com/questions/69954587/no-blas-lapack-libraries-found-when-installing-scipy-on-macos/70880741)
+- [pyenv와 poetry로 python환경 구성하기](https://blog.naver.com/socialmkd/222507249370)
+- [ImportError: No module named 'pystan'on MacOS](https://stackoverflow.com/questions/69481156/importerror-no-module-named-pystanon-macos)
+- [에러해결법 ImportError: IProgress not found](https://woongheelee.com/entry/%EC%97%90%EB%9F%AC%ED%95%B4%EA%B2%B0%EB%B2%95-ImportError-IProgress-not-found)
