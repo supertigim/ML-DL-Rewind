@@ -1,28 +1,29 @@
-from typing import Any, Callable
+from typing import Any, Callable, Final
+from numpy import ndarray as NDA
 
 import numpy as np
 from collections import Counter
 
-def euclidean_distance(x1:np.ndarray, x2:np.ndarray) -> np.ndarray:
+def euclidean_dist(x1:NDA, x2:NDA) -> NDA:
         return np.sqrt(np.sum((x1 - x2)**2))
 
 class KNN:
     '''
         Classifier implementing the k-nearest neighbors vote.
     '''
-    def __init__(self, n_neighbors:int = 3, measurer:Callable = euclidean_distance):
-        self.n_neighbors = n_neighbors
-        self.measurer = measurer
+    def __init__(self, n_neighbors:int = 3, measurer:Callable[[NDA,NDA],NDA] = euclidean_dist):
+        self.n_neighbors:Final[int] = n_neighbors
+        self.measurer:Final[Callable[[NDA,NDA],NDA]] = measurer
 
-    def fit(self, X:np.ndarray, y:np.ndarray):
-        self.X_train = X
-        self.y_train = y
+    def fit(self, X:NDA, y:NDA) -> None:
+        self.X_train:NDA = X
+        self.y_train:NDA = y
 
-    def predict(self, X:np.ndarray) -> np.ndarray:
+    def predict(self, X:NDA) -> NDA:
         y_pred = [self._predict(x) for x in X]
         return np.array(y_pred)
 
-    def _predict(self, x:np.ndarray) -> Any:
+    def _predict(self, x:NDA) -> Any:
         # x와 트레이닝 데이터세의 모든 거리를 구한다. 
         distances = [self.measurer(x, x_train) for x_train in self.X_train]
         # 거리로 정렬 후, n_neighbors 수만큼 가까운 인덱스 모음
