@@ -30,3 +30,4 @@
 - [libomp.dylib 문제 해결 at 맥북](https://shelling203.tistory.com/47)
 - [Pandas: convert date 'object' to int](https://stackoverflow.com/questions/50863691/pandas-convert-date-object-to-int)
 - [Time Series Forecasting - ARIMA](https://doheon.github.io/%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84/time-series/ci-1.arima-post/)
+- [pytest - 코드를 테스트 해봅시다](https://binux.tistory.com/47)

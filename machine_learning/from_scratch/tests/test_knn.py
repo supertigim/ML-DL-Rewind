@@ -1,3 +1,4 @@
+import pytest 
 import numpy as np
 from sklearn import datasets 
 from sklearn.model_selection import train_test_split 
@@ -5,13 +6,32 @@ from sklearn.model_selection import train_test_split
 from models.knn import KNN
 from sklearn.neighbors import KNeighborsClassifier
 
-# Data Preparation from scikit-learn
-iris = datasets.load_iris()
-X, y = iris.data, iris.target 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+def knn_model_and_datasets():
+    # Data Preparation from scikit-learn
+    iris = datasets.load_iris()
+    X, y = iris.data, iris.target 
+    return X, y, train_test_split(X, y, test_size=0.2, random_state=1234)
 
-def test_knn_model():
+def iris_data_visualization():
+    import matplotlib.pyplot as plt 
+    from matplotlib.colors import ListedColormap
+    cmap = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
+
+    X, y, _ = knn_model_and_datasets()
+
+    plt.figure()
+    plt.scatter(X[:,0], X[:,1], c=y, cmap=cmap, edgecolors='k', s=20)
+    plt.show()
+
+@pytest.fixture
+def knn_model_and_datasets_for_pytest():
+    return knn_model_and_datasets()
+
+
+def test_knn_model(knn_model_and_datasets_for_pytest):
     n_neighbors = 5
+
+    _, _, (X_train, X_test, y_train, y_test) = knn_model_and_datasets_for_pytest
 
     my_knn = KNN(n_neighbors=n_neighbors)
     my_knn.fit(X_train, y_train)
@@ -22,8 +42,11 @@ def test_knn_model():
 
     assert acc > 0.95
 
-def test_knn_compare():
+
+def test_knn_compare(knn_model_and_datasets_for_pytest):
     n_neighbors = 5
+
+    _, _, (X_train, X_test, y_train, y_test) = knn_model_and_datasets_for_pytest
 
     my_knn = KNN(n_neighbors=n_neighbors)
     my_knn.fit(X_train, y_train)
@@ -39,5 +62,4 @@ def test_knn_compare():
     assert abs(acc_of_my_knn - acc_of_sklearn_knn) < 0.01
 
 if __name__ == '__main__':
-    test_knn_model()
-    test_knn_compare()
+    iris_data_visualization()

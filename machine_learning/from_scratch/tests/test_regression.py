@@ -1,3 +1,5 @@
+import pytest 
+
 from turtle import color
 import numpy as np
 from sklearn import datasets 
@@ -7,14 +9,20 @@ from sklearn.model_selection import train_test_split
 from models.linear_regression import LinearRegression 
 from utils import mse
 
-X, y = datasets.make_regression(n_samples=100, n_features=1, noise=20, random_state=4)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
-# print(X.shape)
-# print(y.shape)
+def regression_model_and_datasets():
+    X, y = datasets.make_regression(n_samples=100, n_features=1, noise=20, random_state=4)
+    return X, y, train_test_split(X, y, test_size=0.2, random_state=1234)
+
+
+@pytest.fixture
+def regression_model_and_datasets_for_pytest():
+    return regression_model_and_datasets()
+
 
 def data_visualization():
     import matplotlib.pyplot as plt 
 
+    X, y, (X_train, X_test, y_train, y_test) = regression_model_and_datasets()
     print(f'X: {X_train.shape}, {type(X_train)} | y: {y_train.shape}, {type(y_train)}')
 
     fig = plt.figure(figsize=(8,6))
@@ -24,6 +32,7 @@ def data_visualization():
 def prediction_visualization():
     import matplotlib.pyplot as plt
 
+    X, y, (X_train, X_test, y_train, y_test) = regression_model_and_datasets()
     regressor = LinearRegression(lr=0.01)
     regressor.fit(X_train, y_train)
 
@@ -36,8 +45,9 @@ def prediction_visualization():
     plt.plot(X, y_pred_line, color='black', linewidth=2, label='Prediction')
     plt.show()
 
-
-def test_linear_regression():
+def test_linear_regression(regression_model_and_datasets_for_pytest):
+    X, y, (X_train, X_test, y_train, y_test) = regression_model_and_datasets_for_pytest
+    
     lr:np.float64 = 0.01
     regressor = LinearRegression(lr=lr)
     regressor.fit(X_train, y_train)
@@ -52,7 +62,6 @@ def test_linear_regression():
     mse_value_sk = mse(y_test, sk_predicted)
     #print('from sklearn: ', mse_value_sk)
     assert abs(mse_value-mse_value_sk) < 0.01
-
 
 
 if __name__ == '__main__':
