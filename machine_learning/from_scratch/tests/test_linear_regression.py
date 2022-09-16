@@ -61,6 +61,8 @@ def test_linear_regression(regression_model_and_datasets_for_pytest):
     sk_predicted = sk_l_regressor.predict(X_test)
     mse_value_sk = mse(y_test, sk_predicted)
     #print('from sklearn: ', mse_value_sk)
+
+    # scikit-learn의 linear regressor와 비교 
     assert abs(mse_value-mse_value_sk) < 0.01
 
 
