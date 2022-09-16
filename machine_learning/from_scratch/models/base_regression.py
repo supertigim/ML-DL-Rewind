@@ -1,7 +1,6 @@
 from abc import ABCMeta, abstractmethod
 from typing import Final
-from numpy import ndarray as NDA
-from numpy import float64 as Float
+from numpy.typing import NDArray
 
 import numpy as np
 
@@ -9,10 +8,10 @@ class BaseRegression(metaclass=ABCMeta):
     def __init__(self, lr:float=0.001, n_iters:int=1000) -> None:
         self.lr:Final[float] = lr
         self.n_iters:Final[int] = n_iters
-        self.weights:NDA = None
-        self.bias:Float = None
+        self.weights:NDArray = None
+        self.bias:float = None
 
-    def fit(self, X:NDA, y:NDA) -> None:
+    def fit(self, X:NDArray, y:NDArray) -> None:
         # 초기화 
         n_samples, n_features = X.shape 
         self.weights = np.zeros(n_features)
@@ -29,9 +28,9 @@ class BaseRegression(metaclass=ABCMeta):
             self.bias -= self.lr * db
 
     @abstractmethod
-    def predict(self, X:NDA) -> NDA:
+    def predict(self, X:NDArray) -> NDArray:
         pass 
 
     @abstractmethod
-    def _predict(self, X:NDA) -> NDA:
+    def _predict(self, X:NDArray) -> NDArray:
         pass 

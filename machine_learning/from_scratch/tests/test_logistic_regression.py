@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression as SK_LR
 from sklearn.model_selection import train_test_split
 from sklearn import datasets
 
-from models.logic_regression import LogisticRegression
+from models.logistic_regression import LogisticRegression
 from utils import accuracy
 
 def breast_cancer_and_datasets():

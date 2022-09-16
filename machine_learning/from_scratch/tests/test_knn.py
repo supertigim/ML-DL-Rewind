@@ -27,7 +27,6 @@ def iris_data_visualization():
 def knn_model_and_datasets_for_pytest():
     return knn_model_and_datasets()
 
-
 def test_knn_model(knn_model_and_datasets_for_pytest):
     n_neighbors = 5
 
@@ -41,7 +40,6 @@ def test_knn_model(knn_model_and_datasets_for_pytest):
     #print(acc)
 
     assert acc > 0.95
-
 
 def test_knn_compare(knn_model_and_datasets_for_pytest):
     n_neighbors = 5

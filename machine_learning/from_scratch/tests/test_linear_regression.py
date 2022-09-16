@@ -13,11 +13,9 @@ def regression_model_and_datasets():
     X, y = datasets.make_regression(n_samples=100, n_features=1, noise=20, random_state=4)
     return X, y, train_test_split(X, y, test_size=0.2, random_state=1234)
 
-
 @pytest.fixture
 def regression_model_and_datasets_for_pytest():
     return regression_model_and_datasets()
-
 
 def data_visualization():
     import matplotlib.pyplot as plt 
@@ -64,7 +62,6 @@ def test_linear_regression(regression_model_and_datasets_for_pytest):
 
     # scikit-learn의 linear regressor와 비교 
     assert abs(mse_value-mse_value_sk) < 0.01
-
 
 if __name__ == '__main__':
     data_visualization()
