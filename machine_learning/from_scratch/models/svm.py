@@ -3,7 +3,9 @@ from numpy.typing import NDArray
 import numpy as np 
 
 class SVM:
-
+    '''
+        Classifier implementing the support vector machine.
+    '''
     def __init__(self, learning_rate:float=0.001, lambda_param:float=0.01, n_iters:int=1000) -> None:
         self.lr:float = learning_rate
         self.lambda_param:float = lambda_param
